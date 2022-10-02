@@ -17,18 +17,18 @@ It contains a table of all their current active players and details about their:
 
 In order to extract this information, we use a Chrome extension called [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en) which generates the CSS selector of an element. We then store them into variables that are used to create a final data frame. 
 
-Furthermore, on each player's name, there is a hyperlink that leads us to their individual player profile, which contains statistics in the most recent NBA season:
+Furthermore, on each player's name, there is a hyperlink that leads us to their individual player profile containing performance statistics in their most recent NBA season:
 - Average points per game
 - Average rebounds per game
 - Average assists per game
 - Player efficiency rating
 
-For this, we write a function that fetches the season statistics for each player on the team roster and combine them into the data frame from earlier on.
+For this, we write a function that fetches these statistics for each player on the team roster and combine them into the data frame from earlier on.
 
 After the whole process is completed and validated for one team, we use a for loop to repeat the scraping process for all 30 NBA teams by changing the URL.
 
 ## Exploratory data analysis
-Some simple exploratory analysis was also done on the scraped data. In summary, the key insights are as follows:
+Some simple exploratory analysis was done on the final data frame. In summary, the key insights are as follows:
 - Point guards are the shortest and lightest players, while centers are the tallest and heaviest players
 - Average points per game is highly positively correlated with annual player salary
 - Height is negatively correlated with average rebounds per game 
